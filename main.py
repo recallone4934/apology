@@ -155,7 +155,7 @@ async def send_message_task():
     for apology in APOLOGIES:
         if apology.strip():  # Check if the message is not empty or contains only spaces
             await channel.send(apology)
-            await asyncio.sleep(5)  # Sleep for 30 seconds before sending the next message
+            await asyncio.sleep(60)  # Sleep for 30 seconds before sending the next message
           
 keep_alive()  # Starts a webserver to be pinged.
 bot.run(os.getenv('TOKEN'))
